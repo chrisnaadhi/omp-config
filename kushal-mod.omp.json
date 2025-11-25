@@ -24,6 +24,7 @@
             "opensuse": "\uf314",
             "raspbian": "\uf315",
             "ubuntu": "\uf31c",
+            "pop_os": "\uf32a",
             "windows": "\ue70f"
           },
           "style": "diamond",
@@ -37,6 +38,14 @@
           "style": "powerline",
           "template": " \uf489 {{ .Name }} ",
           "type": "shell"
+        },
+        {
+          "background": "#A77BCA",
+          "foreground": "#011627",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": " {{ .UserName }}@{{ .HostName }} ",
+          "type": "session"
         },
         {
           "background": "#EF541C",
@@ -164,7 +173,7 @@
             "charging_icon": "\uf1e6 ",
             "discharging_icon": "\ue234 "
           },
-          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}%{{ end }} "
+          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }} "
         },
         {
           "background": "#03DED3",
