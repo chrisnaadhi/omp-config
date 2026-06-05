@@ -10,7 +10,7 @@
           "foreground": "#D6DEEB",
           "leading_diamond": "\ue0b2",
           "properties": {
-	    "pop": "\uf32a",
+            "pop": "\uf32a",
             "alpine": "\uf300",
             "arch": "\uf303",
             "centos": "\uf304",
@@ -100,7 +100,7 @@
           "properties": {
             "display_mode": "context"
           },
-          "template": " \ue73c {{ .Full }} "
+          "template": " \ue73c {{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }} "
         },
         {
           "type": "elixir",
@@ -178,13 +178,9 @@
         },
         {
           "background": "#03DED3",
-          "background_templates": [
-            "{{ if gt .Code 0 }}#E44141{{ end }}"
-          ],
+          "background_templates": ["{{ if gt .Code 0 }}#E44141{{ end }}"],
           "foreground": "#414141",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#D6DEEB{{ end }}"
-          ],
+          "foreground_templates": ["{{ if gt .Code 0 }}#D6DEEB{{ end }}"],
           "properties": {
             "always_enabled": true
           },
